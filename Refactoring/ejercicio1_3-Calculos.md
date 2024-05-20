@@ -20,9 +20,9 @@ public void imprimirValores() {
 }
 ```
 
-**Code smells:**
-   1. Método largo: el método esta realizando multiples tareas (sumar las edades, sumar los salarios, calcular el promedio de edades e imprimir esos valores).   
-   Mal olor en metodo **"imprimir valores()"**.
+**Code smells:**  
+   1. Método largo: el método esta realizando multiples tareas (sumar las edades, sumar los salarios, calcular el promedio de edades e imprimir esos valores).  
+   Mal olor en metodo **"imprimir valores()"**.  
    Se podría solucionar creando distintos métodos que hagan cada una de esas cosas por separado, aplicandodo refactoring extract method.
 
 *Solucion Codigo del refactoring aplicado*:
@@ -58,9 +58,9 @@ public double calcularTotalSalario() {
 }
 ```
 
-**Code smells:**
-   2. Reinvento la rueda: ya existen programadas funciones para sacar promedios y totales con .streams
-   Mal olor en metodo los for de calcularTotalSalario() y calcularPromedioEdades().
+**Code smells:**  
+   2. Reinvento la rueda: ya existen programadas funciones para sacar promedios y totales con .streams.  
+   Mal olor en metodo los for de calcularTotalSalario() y calcularPromedioEdades().  
    Se podría solucionar reemplazando fors por streams.
 
 *Solucion Codigo del refactoring aplicado*:
@@ -85,9 +85,9 @@ public double calcularTotalSalario() {
 		.sum();
 }
 ```
-**Code smells:**
-   3. temporary fields: hay atributos que solo sirven para almacenar temporalmente 
-   Mal olor las variables message, promiedioEdades y totalSalarios.
+**Code smells:**  
+   3. temporary fields: hay atributos que solo sirven para almacenar temporalmente  
+   Mal olor las variables message, promiedioEdades y totalSalarios.  
    Se podría solucionar removiendo esas variables.
 
 *Solucion Codigo del refactoring aplicado*:
